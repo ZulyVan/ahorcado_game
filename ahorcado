@@ -31,7 +31,7 @@ def categorias():
         print("Tu categoria es FLORES, adivina la frase y viviras, suerte :D")
         return adivinar
 def juego():
-    palabra=seleccion()
+    palabra=categorias()
     ocultar = "_" * len(palabra)
     intentos = 0
     while intentos < 6:
