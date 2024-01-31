@@ -2,12 +2,13 @@ import random
 class Ahorcado:
     def __init__(self):
         pass
-def seleccion():
-    transportes = ["runrun", "motocicleta", "bicicleta", "barco", "metro", "avion"]
-    adivinar = random.choice(transportes)
-    print("COMIENZA LA HORCA, EL CONDENADO TIENE DERECHO A SUS ULTIMAS LETRAS")
-    print("ADIVINA LA FRASE Y VIVIRAS, tienes 6 oportunidades")
-    return adivinar
+def menu():
+    try:
+        print("COMIENZA LA HORCA, EL CONDENADO TIENE DERECHO A SUS ULTIMAS LETRAS")
+        opcion = int(input("Escribe un número del 1 al 4 para elegir tu categoria a adivinar: " ))
+        return opcion
+    except Exception as e:
+            print(f"El programa solo acepta numeros favor de verificar el Error: {e}")
 def juego():
     palabra=seleccion()
     ocultar = "_" * len(palabra)
