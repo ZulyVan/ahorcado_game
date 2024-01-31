@@ -10,7 +10,7 @@ def menu():
     except Exception as e:
             print(f"El programa solo acepta numeros favor de verificar el Error: {e}")
 def categorias():
-    palabra=categorias()
+    categoria=menu()
     transportes = ["carro", "motocicleta", "bicicleta", "barco", "metro", "avion"]
     colores = ["azul", "morado", "verde", "blanco", "negro", "rojo"]
     mascotas = ["perro", "gato", "pajaro", "conejo", "hamster", "pato"]
@@ -32,7 +32,7 @@ def categorias():
         print("Tu categoria es FLORES, adivina la frase y viviras, suerte :D")
         return adivinar
 def juego():
-    palabra=seleccion()
+    palabra=categorias()
     ocultar = "_" * len(palabra)
     intentos = 0
     acumulador = []
