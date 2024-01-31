@@ -14,6 +14,22 @@ def categorias():
     colores = ["azul", "morado", "verde", "blanco", "negro", "rojo"]
     mascotas = ["perro", "gato", "pajaro", "conejo", "hamster", "pato"]
     flores = ["rosas", "girasol", "tulipanes", "orquideas", "margaritas", "diente de leon"]
+    if categoria == 1:
+        adivinar = random.choice(transportes)
+        print("Tu categoria es TRANSPORTES, adivina la frase y viviras, suerte :D")
+        return adivinar
+    elif categoria == 2:
+        adivinar = random.choice(colores)
+        print("Tu categoria es COLORES, adivina la frase y viviras, suerte :D")
+        return adivinar
+    elif categoria == 3:
+        adivinar = random.choice(mascotas)
+        print("Tu categoria es MASCOTAS, adivina la frase y viviras, suerte :D")
+        return adivinar
+    elif categoria == 4:
+        adivinar = random.choice(flores)
+        print("Tu categoria es FLORES, adivina la frase y viviras, suerte :D")
+        return adivinar
 def juego():
     palabra=seleccion()
     ocultar = "_" * len(palabra)
