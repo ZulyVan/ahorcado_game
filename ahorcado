@@ -28,8 +28,19 @@ def juego():
                 break
         else:
             intentos += 1
-            if intentos == 6:
-                print("Se acabo, MORIRAS")
+            acumulador.append(letra)
+            if intentos == 1:
+                print("Letra incorrecta, te quedan", 6-intentos, "intentos. 😄 ")
+            elif intentos == 2:
+                print("Letra incorrecta, te quedan", 6-intentos, "intentos. 😃 ")
+            elif intentos == 3:
+                print("Letra incorrecta, te quedan", 6-intentos, "intentos. 🥲 ")
+            elif intentos == 4:
+                print("Letra incorrecta, te quedan", 6-intentos, "intentos. 😟 ")
+            elif intentos == 5:
+                print("Letra incorrecta, te quedan", 6-intentos, "intento. 😔 ")
+            elif intentos == 6:
+                print("Se acabo, MORIRAS 💀💀💀")
                 print("La palabra era", palabra)
                 break
 juego()
