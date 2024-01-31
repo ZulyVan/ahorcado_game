@@ -8,6 +8,12 @@ def seleccion():
     print("COMIENZA LA HORCA, EL CONDENADO TIENE DERECHO A SUS ULTIMAS LETRAS")
     print("ADIVINA LA FRASE Y VIVIRAS, tienes 6 oportunidades")
     return adivinar
+def categorias():
+    categoria=menu()
+    transportes = ["carro", "motocicleta", "bicicleta", "barco", "metro", "avion"]
+    colores = ["azul", "morado", "verde", "blanco", "negro", "rojo"]
+    mascotas = ["perro", "gato", "pajaro", "conejo", "hamster", "pato"]
+    flores = ["rosas", "girasol", "tulipanes", "orquideas", "margaritas", "diente de leon"]
 def juego():
     palabra=seleccion()
     ocultar = "_" * len(palabra)
