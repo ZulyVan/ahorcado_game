@@ -24,24 +24,5 @@ def categorias():
         adivinar = random.choice(flores)
         print("Tu categoria es FLORES, adivina la frase y viviras, suerte :D")
         return adivinar
-def juego():
-    palabra=categorias()
-    ocultar = "_" * len(palabra)
-    intentos = 0
-    while intentos < 6:
-        letra = input("Ingresa una letra: ")
-        if letra in palabra:
-            for i in range(len(palabra)):
-                if palabra[i] == letra:
-                    ocultar = ocultar[:i] + letra + ocultar[i+1:]
-            print("Acertaste una letra, no te confies: ", ocultar)
-            if "_" not in ocultar:
-                print("GANASTE, se te ha perdonado la vida")
-                break
-        else:
-            intentos += 1
-            if intentos == 6:
-                print("Se acabo, MORIRAS")
-                print("La palabra era", palabra)
-                break
+
 juego()
