@@ -1,0 +1,31 @@
+import random
+class Ahorcado:
+    def __init__(self):
+        pass
+def seleccion():
+    transportes = ["carro", "motocicleta", "bicicleta", "barco", "metro", "avion"]
+    adivinar = random.choice(transportes)
+    print("COMIENZA LA HORCA, EL CONDENADO TIENE DERECHO A SUS ULTIMAS LETRAS")
+    print("ADIVINA LA FRASE Y VIVIRAS, tienes 6 oportunidades")
+    return adivinar
+def juego():
+    palabra=seleccion()
+    ocultar = "_" * len(palabra)
+    intentos = 0
+    while intentos < 6:
+        letra = input("Ingresa una letra: ")
+        if letra in palabra:
+            for i in range(len(palabra)):
+                if palabra[i] == letra:
+                    ocultar = ocultar[:i] + letra + ocultar[i+1:]
+            print("Acertaste una letra, no te confies: ", ocultar)
+            if "_" not in ocultar:
+                print("GANASTE, se te ha perdonado la vida")
+                break
+        else:
+            intentos += 1
+            if intentos == 6:
+                print("Se acabo, MORIRAS")
+                print("La palabra era", palabra)
+                break
+juego()
