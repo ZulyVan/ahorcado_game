@@ -12,9 +12,13 @@ def juego():
     palabra=seleccion()
     ocultar = "_" * len(palabra)
     intentos = 0
+    acumulador = []
     while intentos < 6:
         letra = input("Ingresa una letra: ")
-        if letra in palabra:
+        if letra in acumulador:
+            print("Ya adivinaste esa letra, escribe otra")
+        elif letra in palabra:
+            acumulador.append(letra)
             for i in range(len(palabra)):
                 if palabra[i] == letra:
                     ocultar = ocultar[:i] + letra + ocultar[i+1:]
